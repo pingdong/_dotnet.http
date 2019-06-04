@@ -25,8 +25,10 @@ namespace Newtonsoft.Json.Extensions
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            if (EqualityComparer<T>.Default.Equals((T)value, default))
+            if (value == null)
                 writer.WriteNull();
+            else if (EqualityComparer<T>.Default.Equals((T)value, default))
+                writer.WriteValue(default(T));
             else
                 writer.WriteValue(value);
         }

@@ -8,6 +8,6 @@
         /// <summary>
         /// If the request processes success
         /// </summary>
-        public bool Success { get; set; }
+        public virtual bool Success { get; set; }
     }
 }
