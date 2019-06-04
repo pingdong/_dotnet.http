@@ -2,11 +2,10 @@ using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
-using PingDong.Http.Extensions;
 using PingDong.Testing;
 using Xunit;
 
-namespace PingDong.Linq
+namespace PingDong.Http.Extensions
 {
     public class HttpRequestMessageExtensionTests
     {
